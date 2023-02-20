@@ -1,42 +1,22 @@
 apiVersion: apps/v1
-
 kind: Deployment
-
 metadata:
-
-  name: todo-deployment
-
-  labels:
-
-    app: todo-app
-
+  name: my-deployment
 spec:
-
   replicas: 3
-
   selector:
-
     matchLabels:
-
       app: todo-app
-
   template:
-
     metadata:
-
       labels:
-
         app: todo-app
-
     spec:
-
       containers:
-
-      - name: todo-app
-
+      - name: my-container
         image: hariprasad123456/todoapp1
-
         ports:
+        - containerPort: 80
 
-        - containerPort: 8000
+
 
